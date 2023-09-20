@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Button from "../../UI/Button/Button";
 import Card from "../../UI/Card/Card";
 
@@ -50,7 +50,7 @@ function AddUser(props) {
 
 
   return (
-    <div>
+    <Fragment>
     {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} ></ErrorModal>}
     <Card className={classes.input}>
       <form onSubmit={AddUserHandler}>
@@ -61,7 +61,7 @@ function AddUser(props) {
         <Button type="submit">Add User</Button>
       </form>
     </Card>
-    </div>
+    </Fragment>
   );
 }
 
